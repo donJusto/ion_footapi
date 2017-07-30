@@ -11,14 +11,29 @@ import { FootballdataApiService } from '../../services/footballdataapi.service';
   templateUrl: 'home.html'
 })
 export class HomePage {
-   football: FootballDataApi = new FootballDataApi() ;
+  //  football: FootballDataApi = new FootballDataApi() ;
+   response: FootballDataApi[];
 
   constructor(public navCtrl: NavController, private footballdataApiService: FootballdataApiService) {
-    this.footballdataApiService.getCompetitions()
+
+    //Récupérer compétitions
+    this.footballdataApiService.getTables()
     .then(footballFetched => {
-      this.football = footballFetched;
-      console.log(this.football);
-      })
+      this.response = footballFetched;
+      console.log(this.response);
+      // console.log(this.response[0].players);
+
+    
+  // //Récupérer équipes
+  // this.footballdataApiService.getTeams()
+  //   .then(footballFetched => {
+  //     this.response = footballFetched;
+  //     console.log(this.response);
+  //     console.log(this.response[0].teams.idTeam);
+    });
+    
+  
   }
+
 
 }

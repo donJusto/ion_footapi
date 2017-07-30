@@ -7,8 +7,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="outer-content">
   <ion-list>
+     <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+    </ion-item>    
+
+
+
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-left></ion-icon>
       {{item.title}}

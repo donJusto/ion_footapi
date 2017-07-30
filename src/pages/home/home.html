@@ -7,22 +7,24 @@
   </ion-navbar>
 </ion-header>
 
+
+
 <ion-content padding>
-  <ion-card  >
+  <ion-card *ngFor="let football of response" >
   <img src="img/nin-live.png"/>
   <ion-card-content>
     <ion-card-title>
-     
-      
+    
       </ion-card-title>
     <p>
-       {{ football.caption }}     
+       {{ response.players.name}}     
     </p>
   </ion-card-content>
 </ion-card>
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->
 
-<ion-content>
+
+<!--<ion-content>
   <ion-list>
     <ion-item>
       <ion-note item-start>
@@ -34,4 +36,4 @@
       </ion-note>
     </ion-item>
   </ion-list>
-</ion-content></ion-content>
+</ion-content></ion-content>-->

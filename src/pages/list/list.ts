@@ -6,6 +6,10 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'list.html'
 })
 export class ListPage {
+  public event = {
+    month: '1990-02-19',
+  }
+
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
