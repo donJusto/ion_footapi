@@ -4,10 +4,11 @@ import { Http }         from '@angular/http';
 // RxJS
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
+//models
+import { FootballDataApi }                      from '../models/footballdataapi-global.models';
+import { FootballDataApiLeagueTable }           from '../models/footballdataapi-leaguetable.models';
 
-//Services
 
-import { FootballDataApi } from '../models/footballdataapi-global.models';
 @Injectable()
 export class FootballdataApiService{
 
@@ -61,13 +62,13 @@ export class FootballdataApiService{
     }
         
 
-    public getTables() : Promise<FootballDataApi[]> {
+    public getTables() : Promise<FootballDataApiLeagueTable> {
         // ${this.baseUrl}${this.competitions}${this.idTeam}/leagueTable
         //
         const url = `http://api.football-data.org/v1/competitions/398/leagueTable`;
          return this.http.get(url)
         .toPromise()
-        .then(response => response.json() as FootballDataApi[])
+        .then(response => response.json() as FootballDataApiLeagueTable)
         .catch(error => console.log('You get an error' + error))
 
     }
