@@ -3,37 +3,35 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>FOOTBALL DATA APP</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 
 <ion-content padding>
-  <ion-card *ngFor="let football of response" >
-  <img src="img/nin-live.png"/>
+ 
+  <ion-card  >
+  <!--<img src="assets/img/competition.jpg"/>-->
   <ion-card-content>
-    <ion-card-title>
-    
-      </ion-card-title>
-    <p>
-       {{ response.players.name}}     
-    </p>
+Les Tables
+<button ion-button icon-start (tap)="showTables()">
+<ion-icon name="round"></ion-icon>
+  View
+</button> <br />
+
+</ion-card-content>
+</ion-card>
+
+ <ion-card  >
+<img src="assets/img/championnats.jpg" width="100" height="200" alt="image"/>
+  <ion-card-content>
+Les Compétitions de l'application
+  <button ion-button icon-start (tap)="showRecherche()">
+  <ion-icon name="round"></ion-icon>
+  view
+</button>
+
   </ion-card-content>
 </ion-card>
-  <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->
-
-
-<!--<ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-note item-start>
-        Left Note
-      </ion-note>
-      {{ football.id }} 
-      <ion-note item-end>
-        Right Note
-      </ion-note>
-    </ion-item>
-  </ion-list>
-</ion-content></ion-content>-->
+</ion-content>

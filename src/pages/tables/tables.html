@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tables</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page" >
+
+  <ion-card  *ngFor="let football of response">
+    <img src="img/card-saopaolo.png"/>
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+
+    <p>
+      {{football.standing.teamName}}
+    </p>
+  </ion-card>
+
+</ion-content>

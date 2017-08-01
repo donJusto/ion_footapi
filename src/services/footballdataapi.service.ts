@@ -12,16 +12,19 @@ import { FootballDataApi } from '../models/footballdataapi-global.models';
 export class FootballdataApiService{
 
     private baseUrl : string = ' http://api.football-data.org/v1/';
-    private season : string='2016';
-    private competitions : string = 'competitions/?';
-    private idTeam : number=66;
+    private season : string='season=2017';
+    private competitions : string = 'competitions/';
+    private idTeam : number=398;
     private team : string = 'teams' ;
+    private response: FootballDataApi[];
+    private teamApi: FootballDataApi;
+
     constructor(private http: Http) {
         
     }
     public getCompetitions(): Promise<FootballDataApi[]> {
     // http://api.football-data.org/v1/competitions/?season=2015
-        const url = `${this.baseUrl}${this.competitions}${this.competitions}${this.competitions}`;
+        const url = `${this.baseUrl}${this.competitions}?${this.season}`;
 
         return this.http.get(url)
         .toPromise()
@@ -31,7 +34,8 @@ export class FootballdataApiService{
         
     public getTeams() : Promise<FootballDataApi[]>{
       //http://api.football-data.org/v1/competitions/398/teams 
-      const url = `${this.baseUrl}competitions/${this.idTeam}/${this.team}`;
+      //http://api.football-data.org/v1/teams/66
+      const url = `http://api.football-data.org/v1/teams/66`;
       return this.http.get(url)
         .toPromise()
         .then(response=> response.json() as FootballDataApi[])
@@ -47,13 +51,20 @@ export class FootballdataApiService{
         .catch(error => console.log('You get an error' + error))
     }
 
-        public getListTeams() {
-            //http://api.football-data.org/v1/competitions/398/teams
-        }
+        public getListFixtureH2H() {
+        //http://api.football-data.org/v1/fixtures/149461
+        const url = `${this.baseUrl}/149461`;
+      return this.http.get(url)
+        .toPromise()
+        .then(response => response.json() as FootballDataApi[])
+        .catch(error => console.log('You get an error' + error))
+    }
+        
 
     public getTables() : Promise<FootballDataApi[]> {
-        //http://api.football-data.org/v1/competitions/398/leagueTable
-        const url = `${this.baseUrl}competitions/${this.idTeam}/${this.team}/leagueTable`;
+        // ${this.baseUrl}${this.competitions}${this.idTeam}/leagueTable
+        //
+        const url = `http://api.football-data.org/v1/competitions/398/leagueTable`;
          return this.http.get(url)
         .toPromise()
         .then(response => response.json() as FootballDataApi[])

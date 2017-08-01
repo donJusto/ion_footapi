@@ -5,6 +5,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { TablesPage } from '../pages/tables/tables';
+import { RecherchePage } from '../pages/recherche/recherche';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,13 +15,15 @@ import { HttpModule } from "@angular/http";
 
 //Services
 
-import {FootballdataApiService} from 'C:/laragon/www/ion_foot/src/services/footballdataapi.service'
+import {FootballdataApiService} from '../../src/services/footballdataapi.service'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    TablesPage,
+    RecherchePage
   ],
   imports: [
     HttpModule,
@@ -30,7 +34,9 @@ import {FootballdataApiService} from 'C:/laragon/www/ion_foot/src/services/footb
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    TablesPage,
+    RecherchePage
   ],
   providers: [
     FootballdataApiService,

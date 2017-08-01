@@ -1,7 +1,7 @@
 import { FootballDataApiTeams } from '../models/footballdataapi-teams.models';
-import { FootballDataApiTables } from '../models/footballdataapi-table.models';
 import { FootballDataApiPlayers } from '../models/footballdataapi-players.models';
-
+// import { FootballDataApiTables } from '../models/footballdataapi-tables.models';
+import { FootballDataApiStanding } from '../models/footballdataapi-table.standing.models';
 
 export class FootballDataApi {
     id: number;
@@ -14,10 +14,16 @@ export class FootballDataApi {
     numberOfGames: number;
     lastUpdated: string;
     count : Number;
-    leagueCaption: string;
+    teams : FootballDataApiTeams[];
+    players: FootballDataApiPlayers[];
+    // tables : FootballDataApiTables;
+
+    standing : FootballDataApiStanding[];
+    leagueCaption: String;
     matchday: number;
-    standing: string;
-    tables:  FootballDataApiTables;
-    teams : FootballDataApiTeams;
-    players: FootballDataApiPlayers;
+    name : string;
+    code: string;
+    squadMarketValue: string;
+    crestUrl: string;
+
 }
