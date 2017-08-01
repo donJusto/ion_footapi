@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -10,14 +9,17 @@
 
 <ion-content class="card-background-page" >
 
-  <ion-card  *ngFor="let football of response">
-    <img src="img/card-saopaolo.png"/>
-    <div class="card-title">São Paulo</div>
-    <div class="card-subtitle">41 Listings</div>
-
-    <p>
-      {{football.standing.teamName}}
-    </p>
+  <ion-card  *ngFor="let football of response.standing" >
+    <ion-card-content>
+      <ion-card-title>
+        {{ football.teamName }}
+      </ion-card-title>
+      
+      <img src="img/card-saopaolo.png"/>
+      <div class="card-title">São Paulo</div>
+      <div class="card-subtitle">41 Listings</div>    
+    </ion-card-content>
+    
   </ion-card>
 
 </ion-content>
