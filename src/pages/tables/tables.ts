@@ -24,9 +24,6 @@ export class TablesPage {
         console.log("Les standing")
         console.log(this.response.standing);
       }); 
-
   }
  
 }
-
-

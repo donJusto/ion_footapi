@@ -8,7 +8,6 @@ import 'rxjs/add/operator/map';
 import { FootballDataApi }                      from '../models/footballdataapi-global.models';
 import { FootballDataApiLeagueTable }           from '../models/footballdataapi-leaguetable.models';
 
-
 @Injectable()
 export class FootballdataApiService{
 
@@ -17,7 +16,6 @@ export class FootballdataApiService{
     private competitions : string = 'competitions/';
     private idTeam : number=398;
     private team : string = 'teams' ;
-    private response: FootballDataApi[];
     private teamApi: FootballDataApi;
 
     constructor(private http: Http) {
@@ -64,9 +62,8 @@ export class FootballdataApiService{
 
     public getTables() : Promise<FootballDataApiLeagueTable> {
         // ${this.baseUrl}${this.competitions}${this.idTeam}/leagueTable
-        //
         const url = `http://api.football-data.org/v1/competitions/398/leagueTable`;
-         return this.http.get(url)
+        return this.http.get(url)
         .toPromise()
         .then(response => response.json() as FootballDataApiLeagueTable)
         .catch(error => console.log('You get an error' + error))
