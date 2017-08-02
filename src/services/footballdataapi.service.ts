@@ -5,6 +5,10 @@ import { Http }         from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 
+//Models
+import { FootballDataApiLeagueTable } from '../models/footballdataapi-leagueTable.models';
+
+
 //Services
 
 import { FootballDataApi } from '../models/footballdataapi-global.models';
@@ -16,7 +20,6 @@ export class FootballdataApiService{
     private competitions : string = 'competitions/';
     private idTeam : number=398;
     private team : string = 'teams' ;
-    private response: FootballDataApi[];
     private teamApi: FootballDataApi;
 
     constructor(private http: Http) {
@@ -61,13 +64,12 @@ export class FootballdataApiService{
     }
         
 
-    public getTables() : Promise<FootballDataApi[]> {
+    public getTables() : Promise<FootballDataApiLeagueTable> {
         // ${this.baseUrl}${this.competitions}${this.idTeam}/leagueTable
-        //
         const url = `http://api.football-data.org/v1/competitions/398/leagueTable`;
-         return this.http.get(url)
+        return this.http.get(url)
         .toPromise()
-        .then(response => response.json() as FootballDataApi[])
+        .then(response => response.json() as FootballDataApiLeagueTable)
         .catch(error => console.log('You get an error' + error))
 
     }

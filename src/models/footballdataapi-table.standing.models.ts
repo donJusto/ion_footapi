@@ -1,5 +1,5 @@
 import { FootballDataApiHome } from '../models/footballdataapi-table.home.models';
-// import { FootballDataApiAway } from '../models/footballdataapi-table.away.models';
+import { FootballDataApiAway } from '../models/footballdataapi-table.away.models';
 
 
 
@@ -19,7 +19,7 @@ export class FootballDataApiStanding{
     draws: number;
     losses: number;
     home: FootballDataApiHome;
-    // away: FootballDataApiAway;
+    away: FootballDataApiAway;
 
 
 

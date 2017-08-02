@@ -1,4 +1,4 @@
-export class FootballDataApiHome{
+export class FootballDataApiAway{
     goals: number;
     goalsAgainst: number;
     wins: number;
