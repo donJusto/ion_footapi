@@ -3,14 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>TABLES</ion-title>
+    <ion-title>Competitions</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 
 <ion-content padding>
-  <ion-searchbar
+  <!-- <ion-searchbar
 
   [(ngModel)]="myInput"
   [showCancelButton]="shouldShowCancel"
@@ -22,7 +22,7 @@
   <ion-label>Date</ion-label>
   <ion-datetime displayFormat="YYYY" min="2016" max="2020-10-31" [(ngModel)]="myDate">
   </ion-datetime>
-</ion-item>
+</ion-item> -->
 
   <ion-card  *ngFor="let football of response" >
   <!--<img src="assets/img/test.jpg"/>-->
@@ -34,7 +34,7 @@
     {{football.league}} : {{football.caption}} <br/>
      Matchs par jour : {{football.numberOfMatchdays}} <br/>
      Nombre d'équipes : {{football.numberOfTeams}} <br/>
-     Saison : {{football.year}}-2018 <br/>
+     Saison : {{football.year}} <br/>
      Nombre de matchs {{football.numberOfGames}} <br/>
     </p>
     <button ion-button icon-start>

@@ -1,26 +1,36 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+FootBallApp
 
-## How to use this template
+A mobile football data app witch gives you information about footballs games, results, competions...
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+This application is still in developpement. Started as practical work, this application will be regularly upgraded.s Ionic frameworks is used for this.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+To install Ionic. In terminal Nodejs :
 
-### With the Ionic CLI:
+npm install -g cordova ionic
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
-```
+Functionalities of FootballApp
 
-Then, to run it, cd into `mySideMenu` and run:
+- list of competition
+- Liga results of 2016-2017 season
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
+In development:
 
-Substitute ios for android if not on a Mac.
+- All Europeans championships
+- All Europeans first league clubs results since 2014;
+- Best world players stats
+- Teams head to head
+- Nationals selection teams stats
 
+
+About API
+FootballDataAPI
+
+
+Authors
+
+Juste : https://github.com/donJusto
+Danielle : https://github.com/modafouda
+License
+
+Free to use.

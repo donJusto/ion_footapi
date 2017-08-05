@@ -1,3 +1,4 @@
+
 <ion-header>
 
   <ion-navbar>
@@ -9,17 +10,109 @@
 
 <ion-content class="card-background-page" >
 
-  <ion-card  *ngFor="let football of response.standing" >
-    <ion-card-content>
-      <ion-card-title>
-        {{ football.teamName }}
-      </ion-card-title>
-      
-      <img src="img/card-saopaolo.png"/>
-      <div class="card-title">São Paulo</div>
-      <div class="card-subtitle">41 Listings</div>    
-    </ion-card-content>
+  <ion-card  >
+    <div class="card-title"> {{ response.leagueCaption}} </div>
+  </ion-card>
+
+  <ion-card  *ngFor="let football of response.standing">
     
+    <img src="img/card-saopaolo.png"/>
+    <div class="card-title"> {{ football.leagueCaption}} </div>
+    <div class="card-subtitle"> Résultats de {{football.teamName}} </div>
+     
+    <p>
+
+      <ion-grid>
+  <ion-row>
+    
+     <br/>
+      Position :{{ football.position }} <br/>
+      Points : {{ football.points }} <br/>
+      Total match nuls: {{ football.draws }} <br/>
+      Total matchs gagnés: {{ football.wins }} <br/>
+      Total matchs perdus: {{ football.points }} <br/>
+      <br/>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-md-3>
+        Domicile<br/>
+        gagnés :  <br/>
+        perdus :  <br/>
+        nuls :  <br/>
+        Buts pour :  <br/> 
+        Buts contre :  <br/>
+
+      </ion-col>
+      <ion-col col-md-3>  <br/>
+        {{ football.home.wins }} <br/>
+        {{ football.home.draws }} <br/>
+        {{ football.home.losses }} <br/>
+        {{ football.home.goals }} <br/> 
+        {{ football.home.goalsAgainst }} <br/>
+
+      </ion-col>
+
+    <ion-col col-md-3>
+      Extérieur 
+ 
+     <br/>
+      {{ football.away.wins }} <br/>
+      {{ football.away.draws }} <br/>
+      {{ football.away.losses }} <br/>
+      {{ football.away.goals }} <br/> 
+      {{ football.away.goalsAgainst }} <br/>
+
+
+      
+    </ion-col>
+
+  </ion-row> 
+
+   <ion-row>
+
+    <!-- <ion-col col-md-3>
+    Domicile
+    </ion-col>
+    <ion-col col-md-3>
+    Extérieur
+    </ion-col>-->
+  </ion-row> 
+</ion-grid>
+
+
+      <!-- <ion-grid>
+  <ion-row>
+    <ion-col col-12>Résultat</ion-col>
+  </ion-row>
+  </ion-grid>
+      Résultats <br/>
+      Position :{{ football.position }} <br/>
+      Points : {{ football.points }} <br/>
+      Total match nuls: {{ football.draws }} <br/>
+      Total matchs gagnés: {{ football.wins }} <br/>
+      Total matchs perdus: {{ football.points }} <br/>
+      <br/>
+      Statistiques à Domicile <br/>
+      
+      Matchs à Domicile :  <br/>
+      gagnés : {{ football.home.wins }} <br/>
+      perdus : {{ football.home.looses }} <br/>
+      nuls : {{ football.home.draws }} <br/>
+      Buts pour : {{ football.home.goals }} <br/> 
+      Buts contre : {{ football.home.goalsAgainst }} <br/>
+
+       Statistiques à l'Extérieur <br/> <br/>
+      
+      Matchs à l'Extérieur :  <br/>
+      gagnés : {{ football.away.wins }} <br/>
+      perdus : {{ football.away.looses }} <br/>
+      nuls : {{ football.away.draws }} <br/>
+      Buts pour : {{ football.away.goals }} <br/> 
+      Buts contre : {{ football.away.goalsAgainst }} <br/>
+  -->
+      
+    </p>
   </ion-card>
 
 </ion-content>

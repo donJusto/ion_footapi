@@ -1,20 +1,34 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <!-- <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>FOOTBALL DATA APP</ion-title>
+    </button> -->
+    <ion-title>ACCUEIL</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 
 <ion-content padding>
+
+  <ion-card  >
+  <em>   Compétitions et championnats </em><br/><br/>
+ <img src="assets/img/championnats.jpg" width="100" height="200" alt="image"/> 
+  <ion-card-content>
+
+  <button ion-button icon-start (tap)="showRecherche()">
+  <ion-icon name="round"></ion-icon>
+  view
+</button>
+
+  </ion-card-content>
+</ion-card>
  
   <ion-card  >
-  <!--<img src="assets/img/competition.jpg"/>-->
+    <em>  Résultats des clubs </em><br/><br/>
+  <img src="assets/img/resultats.jpg" width="100" height="200" alt="image"/>  
   <ion-card-content>
-Les Tables
+
 <button ion-button icon-start (tap)="showTables()">
 <ion-icon name="round"></ion-icon>
   View
@@ -23,15 +37,5 @@ Les Tables
 </ion-card-content>
 </ion-card>
 
- <ion-card  >
-<img src="assets/img/championnats.jpg" width="100" height="200" alt="image"/>
-  <ion-card-content>
-Les Compétitions de l'application
-  <button ion-button icon-start (tap)="showRecherche()">
-  <ion-icon name="round"></ion-icon>
-  view
-</button>
-
-  </ion-card-content>
-</ion-card>
+ 
 </ion-content>
