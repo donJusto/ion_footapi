@@ -1,10 +1,12 @@
 import { FootballDataApiHome } from '../models/footballdataapi-table.home.models';
-import { FootballDataApiAway } from '../models/footballdataapi-away.model';
+import { FootballDataApiAway } from '../models/footballdataapi-table.away.models';
 
-export class FootballDataApiStanding {
+
+
+
+export class FootballDataApiStanding{
     
     crestURI: string;
-    
     position: number;
     teamName: string;
     playedGames: number;
@@ -15,7 +17,6 @@ export class FootballDataApiStanding {
     wins: number;
     draws: number;
     losses: number;
-
     home: FootballDataApiHome;
     away: FootballDataApiAway;
 

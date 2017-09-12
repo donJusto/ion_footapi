@@ -14,10 +14,20 @@ import { FootballdataApiService } from '../../services/footballdataapi.service';
   templateUrl: 'home.html'
 })
 export class HomePage {
+    response: FootballDataApi;
 
   constructor(public navCtrl: NavController, private footballdataApiService: FootballdataApiService) {
 
-    //Récupérer compétitions
+//  //Récupérer compétitions
+//     this.footballdataApiService.getTables()
+//       .then(footballFetched => {
+//       this.response = footballFetched;
+//       console.log(this.response.standing);
+//       // console.log(this.response[1].name);
+
+  
+//     });
+    
 
 }
 private showTables(){
